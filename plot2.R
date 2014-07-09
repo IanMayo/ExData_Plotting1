@@ -18,6 +18,8 @@ png(filename="plot2.png", width=480, height=480, units="px")
 
 ## draw the line plot
 plot(df$globalActivePower, type="l", xaxt="n", xlab="", ylab="Global Active Power (kilowatts)")
+
+## add our shiny new Days axis
 axis(1, at=c(1, as.integer(nrow(df)/2), nrow(df)), labels=c("Thu", "Fri", "Sat"))
 
 ## dump the output to the device
