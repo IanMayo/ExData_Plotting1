@@ -14,7 +14,7 @@ df$date = as.Date(df$date, format="%d/%m/%Y")
 df = df[df$date >= as.Date("2007-02-01") & df$date<=as.Date("2007-02-02"),]
 
 ## declare the output device
-png(filename="plot1.png", width=480, height=480, units="px")
+png(filename="plot1.png", width=480, height=480, units="px", bg="transparent")
 
 ## draw the histogram
 hist(df$globalActivePower, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
